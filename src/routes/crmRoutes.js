@@ -15,7 +15,6 @@ const routes = (app) => {
                 next();
             },
             getAllContacts)
-
         // .post((req, res) => {
         //     res.send("POST /contact successfull")})
         .post(addNewContact);
