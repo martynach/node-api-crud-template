@@ -16,6 +16,11 @@ mongoose.connect(connectionString);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+
+// serving static files
+app.use(express.static('public'));   // GET: http://localhost:3000/shoes.jpg
+app.use(express.static('images'));   // GET: http://localhost:3000/baby.jpg
+
 routes(app);
 
     app.get("/", (req, res, next) => {
